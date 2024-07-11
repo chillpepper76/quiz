@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OX Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .row {
+            margin: 10px 0;
+        }
+
+        .btn {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn.o {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+
+        .btn.x {
+            background-color: #F44336; /* Red */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <button class="btn o">O</button>
+            <button class="btn o">O</button>
+            <button class="btn o">O</button>
+            <button class="btn o">O</button>
+            <button class="btn o">O</button>
+        </div>
+        <div class="row">
+            <button class="btn x">X</button>
+            <button class="btn x">X</button>
+            <button class="btn x">X</button>
+            <button class="btn x">X</button>
+            <button class="btn x">X</button>
+        </div>
+    </div>
+</body>
+</html>

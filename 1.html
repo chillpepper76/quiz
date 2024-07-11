@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>나의 첫 웹페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        img {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="welcome">안녕하세요, 웹페이지에 오신 것을 환영합니다!</h1>
+    <p>이것은 HTML로 작성된 문단입니다.</p>
+    <img src="https://via.placeholder.com/150" alt="예제 이미지">
+    <a href="https://www.example.com">이곳을 클릭하세요</a>
+    <button onclick="changeText()">텍스트 변경</button>
+
+    <script>
+        function changeText() {
+            document.getElementById('welcome').innerText = "텍스트가 변경되었습니다!";
+        }
+    </script>
+</body>
+</html>

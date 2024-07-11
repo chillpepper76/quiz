@@ -1,0 +1,153 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Screen</title>
+    <style>
+        /* body의 여백을 제거, 폰트를 설정 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* container를 flexbox로 만들어 요소들을 수직으로 배치 */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* 화면 높이의 100% */
+        }
+
+        /* 헤더 섹션의 스타일 */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* 요소들 사이에 공간을 둠 */
+            padding: 10px;
+            background-color: #f5f5f5; 
+            position: relative; /* 제목을 중앙에 배치하기 위해 추가 */
+        }
+
+        /* 메뉴와 프로필 아이콘의 스타일 */
+        .menu-btn, .profile-icon {
+            font-size: 24px; /* 큰 글꼴 크기 */
+        }
+
+        /* 제목 글자의 스타일 */
+        .title {
+            position: absolute; /* 절대 위치 */
+            left: 50%; /* 왼쪽으로부터 50% */
+            transform: translateX(-50%); /* 가운데 정렬을 위해 X축으로 50% 이동 */
+            font-size: 20px; /* 중간 글꼴 크기 */
+            font-weight: bold; 
+        }
+
+        /* 진행 막대 컨테이너의 스타일 */
+        .progress {
+            position: relative; /* 자식 요소를 상대적으로 위치 */
+            width: 100%; /* 전체 너비 */
+            height: 4px; /* 얇은 막대 */
+            background-color: #FFFFFF;
+            margin: 0 10px; /* 좌우 여백 */
+        }
+
+        /* 실제 진행 막대의 스타일 */
+        .progress-bar {
+            position: absolute; /* 진행 막대 컨테이너 내에서 절대 위치 */
+            width: 5%; /* 5% 너비로 일부 진행 표시 */
+            height: 100%; /* 진행 막대 컨테이너의 전체 높이 */
+            background-color: #007bff; /* 파란색 */
+        }
+
+        /* 메인 콘텐츠 섹션의 스타일 */
+        main {
+            flex: 1; /* 남은 공간 차지 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center; /* 텍스트 중앙 정렬 */
+        }
+
+        /* 문제 번호의 스타일 */
+        .question-number {
+            font-size: 24px; /* 큰 글꼴 크기 */
+            margin-bottom: 20px; /* 아래 여백 */
+        }
+
+        /* 문제 텍스트의 스타일 */
+        .question-text {
+            font-size: 20px; /* 중간 글꼴 크기 */
+            margin-bottom: 40px; /* 더 큰 아래 여백 */
+        }
+
+        /* 버튼 컨테이너의 스타일 */
+        .buttons {
+            display: flex;
+            gap: 20px; /* 버튼 사이의 공간 */
+        }
+
+        /* 두 버튼의 스타일  */
+        .true-btn, .false-btn {
+            width: 100px; /* 버튼 너비 */
+            height: 50px; /* 버튼 높이 */
+            font-size: 20px; /* 중간 글꼴 크기 */
+            border: none; /* 테두리 없음 */
+            border-radius: 5px; /* 둥근 모서리 */
+            color: white; /* 흰색 글자 */
+            cursor: pointer; /* 마우스 올리면 포인터 커서 */
+        }
+
+        /* "O" 버튼의 스타일 */
+        .true-btn {
+            background-color: #1684E9; 
+        }
+
+        /* "X" 버튼의 스타일 */
+        .false-btn {
+            background-color: #FB6C95; 
+        }
+
+        /* 하단의 푸터 스타일 */
+        footer {
+            height: 20px; /* 높이 20px */
+            background-color: #FF00FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- 메뉴 버튼 -->
+            <button class="menu-btn">
+                <img src="image.url" alt="Menu">
+            </button>
+            <!-- 진행 바 -->
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
+            <!-- 제목 -->
+            <div class="title">이왜상</div>
+            <!-- 프로필 아이콘 -->
+            <div class="profile-icon">
+                <img src="image.url" alt="Profile">
+            </div>
+        </header>
+        <main>
+            <!-- 문제 번호 -->
+            <div class="question-number">문제 1</div>
+            <!-- 문제 텍스트 -->
+            <div class="question-text">영국은 섬나라다.</div>
+            <!-- O/X 버튼 -->
+            <div class="buttons">
+                <button class="true-btn">O</button>
+                <button class="false-btn">X</button>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
+
